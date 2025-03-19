@@ -15,7 +15,7 @@ studenti = {
 def create_studente():
     # estrae il corpo della richiesta HTTP in formato JSON e lo converte in un dizionario Python
     dati = request.json
-    print(request)
+    
     nuovo_id = max(studenti.keys(), default=0) + 1
     studenti[nuovo_id] = {
         "nome": dati.get("nome"),
